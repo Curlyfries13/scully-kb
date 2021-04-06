@@ -1,0 +1,63 @@
+@use "sass:map";
+
+@import "~src/sass/abstracts/sizes";
+@import "~src/sass/abstracts/colors";
+
+.app-container {
+  display: grid;
+  grid: [stack] 1fr / min-content [stack] 1fr;
+  // flex to bottom of screen, dependent on
+  flex: 1 0 auto;
+}
+
+.sidenav-base {
+  width: 200px;
+  display: grid;
+  visibility: visible;
+  transition: box-shadow .25s ease-out;
+  transition: all .6s ease-in-out;
+  overflow-x: clip;
+  position: sticky;
+}
+
+.sidenav-base.collapse {
+  // transform: translateX(-100%);
+  width: 0px;
+  visibility: hidden;
+}
+
+.main-content {
+  padding: 0px .5em;
+  padding-top: 12px;
+}
+
+// TODO: extract icon to a central stylesheet
+.icon-list {
+  width: 1.2em;
+  height: 1.2em;
+  mask: url(/assets/list.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  display: inline-block;
+  background: $black;
+}
+
+@media (max-width: map.get($breakpoints, "medium")) {
+  main {
+    grid-area: stack;
+  }
+  .sidenav-base {
+    width: auto;
+    grid-area: stack;
+    grid-template-columns: [nav] minmax(200px, 2fr) [escape] 3fr;
+    transition: box-shadow .25s ease-out;
+    transition: all .6s ease-in-out;
+    position: sticky;
+  }
+
+  .sidenav-base.collapse {
+    width: auto;
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,19 @@
+<nav class="topnav">  
+  <button class="button nav-open-button" (click)="toggleSidebar()">
+    <span class="icon-list icon"></span>
+  </button>
+  <a class="nav nav-brand" routerLink='/'>
+    <span class="icon-brain icon"></span>
+  </a>
+  <ul class="nav">
+    <ng-container *ngFor="let route of navRoutes.routes">
+      <ng-container *ngIf="!!route.data.renderNav">
+        <li class="nav-item">
+          <a routerLink="{{route.path}}" (click)="closeOverSidebar()">
+            <span class="nav-link-inner">{{route.data.title}}</span>
+          </a>
+        </li>
+      </ng-container>
+    </ng-container>
+  </ul>
+</nav>

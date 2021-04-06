@@ -1,0 +1,7 @@
+// set app root to flex to allow main content to stretch all the way to the
+// bottom of the viewport
+.app-root { 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

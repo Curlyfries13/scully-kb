@@ -1,0 +1,13 @@
+<div  class="sidenav-list">
+  <ul>
+    <span *ngFor="let category of categoryRoutes | keyvalue">
+      <app-sidenav-category [category]="category.key" [categoryRoutes]="category.value">
+      </app-sidenav-category>
+    </span>
+  </ul>
+  <ul class="sidenav-list" *ngIf="uncategorizedRoutes.length > 0">
+    <li class="sidenav-listItem" *ngFor="let route of uncategorizedRoutes">
+      <a class="sidenav-link" [routerLink]="route.route">{{route.title}}</a>
+    </li>
+  </ul>
+</div>

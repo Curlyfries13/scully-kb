@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "sass:color";
+
+@import "~src/sass/abstracts/colors";
+@import "~src/sass/abstracts/sizes";
+
+.sidenav-list {
+  padding: 0px 1.5em;
+  padding-top: 12px;
+  background-color: color.adjust($color: $white, $lightness: -5%, $saturation: -10%);
+  border-right: 1px solid $bright; }
+
+.sidenav-listItem {
+  white-space: nowrap;
+}
+
+@media (max-width: map.get($breakpoints, "medium")) {
+  .sidenav-list {
+    box-shadow: 10px 0px 5px 0px rgba($black, .2);
+  }
+}

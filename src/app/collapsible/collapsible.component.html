@@ -1,0 +1,5 @@
+<div [class]="{'collapsible': true, 'collapse': collapsed}"
+  [style.maxHeight]='collapsed ? "0px" : content?.scrollHeight + "px"'
+  #content>
+  <ng-content></ng-content>
+</div>

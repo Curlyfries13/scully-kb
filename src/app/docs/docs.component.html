@@ -1,0 +1,7 @@
+<ul aria-label="Documentation Pages">
+  <li *ngFor="let doc of $docs | async">
+    <a [routerLink]="doc.route">
+      {{doc.title}}
+    </a>
+  </li>
+</ul>

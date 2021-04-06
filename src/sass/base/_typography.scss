@@ -1,0 +1,51 @@
+/**
+ * Basic styles for links
+ */
+a {
+  color: $primary;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+p, b{
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $secondary-dark;
+  font-weight: 500;
+}
+
+.title {
+  coor: $accent;
+}
+
+
+h1 {
+  font-size: $font-4x-large;
+
+  &.title {
+    margin-bottom: .5em;
+  }
+}
+
+h2 {
+  font-size: $font-3x-large;
+}
+
+h3 {
+  font-size: $font-xx-large;
+}
+
+h4 {
+  font-size: $font-x-large;
+}
+
+h5 {
+  font-size: $font-large
+}
+

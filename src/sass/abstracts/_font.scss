@@ -1,0 +1,19 @@
+/// Regular font family
+/// @type List
+$text-font-stack: 'Lato', Cambria, Times, "Times New Roman", serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+$font-xx-small: 10px;
+$font-x-small: 12px;
+$font-small: 14px;
+$font-medium: 16px;
+$font-large: 18px;
+$font-x-large: 20px;
+$font-xx-large: 24px;
+$font-3x-large: 30px;
+$font-4x-large: 36px;
+$font-5x-large: 48px;
+$font-6x-large: 60px;

@@ -1,0 +1,66 @@
+@import "~src/sass/abstracts/sizes";
+@import "~src/sass/abstracts/colors";
+
+.topnav {
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  color: $white;
+  list-style: none;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 0px 1em;
+}
+
+.nav-brand {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 12px;
+}
+
+// TODO: migrate icon styles to central location
+// order for svg icon styles matters
+.icon-brain {
+  mask: url(/assets/brain.svg);
+}
+
+.icon-book {
+  mask: url(/assets/phosphoricons-book-open.svg);
+}
+
+.icon-list {
+  mask: url(/assets/list.svg);
+}
+
+.icon {
+  width: 2.5em;
+  height: 2em;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  display: inline-block;
+  background: $primary-highlight
+}
+
+.icon:hover,
+.icon:focus {
+  background: $white;
+}
+
+.nav-open-button {
+  background-color: transparent;
+  display: inline-block;
+  height: 64px;
+}

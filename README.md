@@ -1,14 +1,20 @@
 # ScullyKb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3. This is a template for creating a Scully-based Knowledge Base
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server with Scully documents. Navigate to
+`http://localhost:4200/`. The app will automatically reload if you change any of
+the source files.
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Adding new documents
+Run `ng generate @scullyio/init:post` which will prompt you to choose a name for
+the post and a folder it'll go in.
 
 ## Build
 

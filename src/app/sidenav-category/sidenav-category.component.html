@@ -1,0 +1,10 @@
+<span>
+  <h2 class="nav-header" (click)=toggleCollapse()>
+    {{category}}
+  </h2>
+</span>
+<app-collapsible [collapsed]="collapse">
+  <li class="sidenav-listItem" *ngFor="let route of categoryRoutes">
+    <a class="sidenav-link" [routerLink]="route.route">{{route.title}}</a>
+  </li>
+</app-collapsible>

@@ -1,0 +1,8 @@
+// Breakpoints
+// small is smaller than mobile even
+// larger than medium is tablet or desktop
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
